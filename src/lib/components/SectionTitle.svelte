@@ -1,5 +1,5 @@
 <script>
-    import { fade } from "svelte/transition";
+    import { fly } from "svelte/transition";
     import { inView } from "$lib/utils/animations.js";
 
     let { title, textStyles = "" } = $props();
@@ -14,11 +14,11 @@
     }}
 >
     {#if show}
-        <p
-            transition:fade={{ duration: 600 }}
-            class="font-normal text-[14px] text-secondary-white {textStyles}"
+        <h2
+            transition:fly={{ y: 20, duration: 600 }}
+            class="mt-[8px] font-serif font-bold md:text-[64px] text-[40px] text-white {textStyles}"
         >
             {title}
-        </p>
+        </h2>
     {/if}
 </div>

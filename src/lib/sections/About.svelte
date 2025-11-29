@@ -1,17 +1,16 @@
 <script>
     import { fly } from "svelte/transition";
     import { inView, staggerDelay } from "$lib/utils/animations.js";
-    import TypingText from "$lib/components/TypingText.svelte";
+    import SectionSubtitle from "$lib/components/SectionSubtitle.svelte";
     import styles from "$lib/utils/styles.js";
 
     let showText = $state(false);
     let showArrow = $state(false);
 </script>
 
-<section class="{styles.paddings} relative z-10">
-    <div class="gradient-02 z-0"></div>
+<section class="{styles.paddings} relative z-10" id="about">
     <div class="{styles.innerWidth} mx-auto {styles.flexCenter} flex-col">
-        <TypingText title="| Tietoa" textStyles="text-center" />
+        <SectionSubtitle title="| Tietoa" textStyles="text-center" />
         <div
             use:inView={{
                 onEnter: () => (showText = true),
@@ -22,30 +21,69 @@
             {#if showText}
                 <p
                     transition:fly={{ y: 100, duration: 1000, delay: 200 }}
-                    class="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
+                    class="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white leading-relaxed"
                 >
-                    <span class="font-extrabold text-white">
+                    <span class="font-serif font-bold text-white">
                         Esan verhoilu
                     </span>
                     tarjoaa ammattitaitoisia verhoilupalveluja
-                    <span class="font-extrabold text-white"> Lapualla </span>,
-                    Karhunkylässä. Laadukkaan kädenjäljen perustana on
+                    <span class="font-serif font-bold text-white">
+                        Lapualla
+                    </span>, Karhunkylässä. Laadukkaan kädenjäljen perustana on
                     verhoilijan ja puusepän ammattitaito ja
-                    <span class="font-extrabold text-white">
+                    <span class="font-serif font-bold text-white">
                         kymmenien vuosien työkokemus aloilta.
                     </span>
-                    Esan verhoilu tarjoaa<span class="font-extrabold text-white"
-                        >tyylikkään verhoilun
+                    Esan verhoilu tarjoaa<span
+                        class="font-serif font-bold text-white"
+                    >
+                        tyylikkään verhoilun
                     </span>
                     sekä kotien että julkisten tilojen huonekaluille. Myös
-                    <span class="font-extrabold text-white"
-                        >ajoneuvojen penkit ja veneiden sisustat
+                    <span class="font-serif font-bold text-white">
+                        ajoneuvojen penkit ja veneiden sisustat
                     </span>
                     saavat uuden ilmeen Esan verhoilussa. Verhoilut suunnitellaan
                     ja toteutetaan aina asiakkaan tarpeiden ja toiveiden mukaan.
                 </p>
             {/if}
         </div>
+
+        <!-- Workshop Images -->
+        <div
+            use:inView={{
+                onEnter: () => (showArrow = true),
+                threshold: 0.25,
+                once: false,
+            }}
+        >
+            {#if showArrow}
+                <div
+                    transition:fly={{ y: 100, duration: 1000, delay: 200 }}
+                    class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
+                >
+                    <div
+                        class="relative overflow-hidden rounded-xl border border-white/10"
+                    >
+                        <img
+                            src="/new_place.jpeg"
+                            alt="Esan verhoilu työpaja"
+                            class="w-full h-[300px] object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500"
+                        />
+                    </div>
+                    <div
+                        class="relative overflow-hidden rounded-xl border border-white/10"
+                    >
+                        <img
+                            src="/new_place2.jpeg"
+                            alt="Esan verhoilu tilat"
+                            class="w-full h-[300px] object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500"
+                        />
+                    </div>
+                </div>
+            {/if}
+        </div>
+
         <div
             use:inView={{
                 onEnter: () => (showArrow = true),

@@ -16,17 +16,19 @@
     {#if show}
         <footer
             transition:fly={animations.footerSlideUp}
-            class="{styles.xPaddings} py-8 relative"
+            class="{styles.xPaddings} py-8 relative border-t border-white/10 bg-primary-dark"
             id="footer"
         >
-            <div class="footer-gradient"></div>
             <div class="{styles.innerWidth} mx-auto flex flex-col gap-8">
-                <div class="flex flex-col">
-                    <div class="mb-[50px] h-[2px] bg-white opacity-10"></div>
-
+                <div class="flex flex-col items-center">
                     <div class="items-center text-center gap-4">
+                        <h4
+                            class="font-serif font-bold text-[24px] text-white mb-4"
+                        >
+                            ESANVERHOILU
+                        </h4>
                         <p
-                            class="font-normal text-[14px] text-white opacity-50"
+                            class="font-normal text-[14px] text-secondary-white opacity-50"
                         >
                             Copyright © 2025 Esanverhoilu. All rights reserved.
                         </p>

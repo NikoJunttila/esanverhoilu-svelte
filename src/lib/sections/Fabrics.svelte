@@ -2,14 +2,14 @@
     import { fly } from "svelte/transition";
     import { inView } from "$lib/utils/animations.js";
     import styles from "$lib/utils/styles.js";
-    import TitleText from "$lib/components/TitleText.svelte";
-    import TypingText from "$lib/components/TypingText.svelte";
+    import SectionTitle from "$lib/components/SectionTitle.svelte";
+    import SectionSubtitle from "$lib/components/SectionSubtitle.svelte";
 
     let showContent = $state(false);
     let showImage = $state(false);
 </script>
 
-<section class="{styles.paddings} relative z-10">
+<section class="{styles.paddings} relative z-10" id="fabrics">
     <div class="{styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8">
         <div
             use:inView={{
@@ -23,8 +23,8 @@
                     transition:fly={{ x: 100, duration: 1000, delay: 200 }}
                     class="flex-[0.95] flex justify-center flex-col"
                 >
-                    <TypingText title="| Kankaat" />
-                    <TitleText title="Kankaat" />
+                    <SectionSubtitle title="| Kankaat" />
+                    <SectionTitle title="Kankaat" />
                     <div
                         class="mt-[25px] flex flex-wrap justify-between gap-[24px] mt-[8px] font-normal sm:text-[28px] text-[20px] text-center text-secondary-white"
                     >

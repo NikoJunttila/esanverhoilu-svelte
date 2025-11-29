@@ -2,17 +2,17 @@
     import { fly, scale } from "svelte/transition";
     import { inView } from "$lib/utils/animations.js";
     import styles from "$lib/utils/styles.js";
-    import TitleText from "$lib/components/TitleText.svelte";
-    import TypingText from "$lib/components/TypingText.svelte";
+    import SectionTitle from "$lib/components/SectionTitle.svelte";
+    import SectionSubtitle from "$lib/components/SectionSubtitle.svelte";
 
     let showText = $state(false);
     let showImage = $state(false);
 </script>
 
-<section class="{styles.paddings} relative z-10">
+<section class="{styles.paddings} relative z-10" id="pricing">
     <div class="{styles.innerWidth} mx-auto flex flex-col">
-        <TypingText title="| Hinta" textStyles="text-center" />
-        <TitleText title="HINTA-ARVIO" textStyles="text-center" />
+        <SectionSubtitle title="| Hinta" textStyles="text-center" />
+        <SectionTitle title="HINTA-ARVIO" textStyles="text-center" />
         <div
             use:inView={{
                 onEnter: () => (showText = true),
