@@ -1,6 +1,7 @@
 <script>
+  import { onMount } from "svelte";
   import { fly } from "svelte/transition";
-  import { inView, animations } from "$lib/utils/animations.js";
+  import { animations } from "$lib/utils/animations.js";
   import styles from "$lib/utils/styles.js";
   import { theme, toggleTheme } from "$lib/stores/theme.js";
 
@@ -20,18 +21,16 @@
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
+
+  onMount(() => {
+    show = true;
+  });
 </script>
 
-<div
-  use:inView={{
-    onEnter: () => (show = true),
-    threshold: 0.1,
-    once: false,
-  }}
->
+<div>
   {#if show}
     <nav
-      transition:fly={animations.navSlideDown}
+      in:fly={{ y: -50, duration: 1000, delay: 500 }}
       class="{styles.xPaddings} py-3 fixed top-0 w-full z-50 glassmorphism border-b border-white/10"
     >
       <div

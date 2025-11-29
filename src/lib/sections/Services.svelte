@@ -41,17 +41,12 @@
                     in:fade={{ duration: 600, delay: index * 150 }}
                     class="group p-8 bg-secondary-dark/50 rounded-2xl border border-white/10 hover:border-accent-gold/50 transition-all duration-300 hover:scale-105"
                 >
-                    <div
-                        class="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300"
-                    >
-                        {service.icon}
-                    </div>
                     <h3
-                        class="font-serif text-2xl text-accent-gold mb-4 group-hover:text-white transition-colors"
+                        class="p-2 rounded font-serif text-2xl text-accent-gold mb-4 group-hover:text-white transition-colors"
                     >
                         {service.title}
                     </h3>
-                    <p class="text-secondary-white leading-relaxed">
+                    <p class="p-2 rounded text-secondary-white leading-relaxed">
                         {service.description}
                     </p>
                 </div>

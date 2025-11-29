@@ -2,27 +2,27 @@ export const exploreWorlds = [
     {
         id: 'world-1',
         imgUrl: '/chairs.jpg',
-        title: 'chair',
+        title: 'Entisöidyt tuolit',
     },
     {
         id: 'world-2',
         imgUrl: '/moottorikelkka.jpg',
-        title: 'carchair',
+        title: 'Moottorikelkan penkki',
     },
     {
         id: 'world-3',
         imgUrl: '/sofa.jpg',
-        title: 'Chairs',
+        title: 'Sohvan verhoilu',
     },
     {
         id: 'world-4',
         imgUrl: '/sofa2.jpg',
-        title: 'Sofa',
+        title: 'Moderni sohva',
     },
     {
         id: 'world-5',
         imgUrl: '/chair.jpg',
-        title: 'woodenchair',
+        title: 'Perinteinen nojatuoli',
     },
 ];
 
