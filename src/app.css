@@ -37,6 +37,13 @@ html.light svg {
   background: none !important;
 }
 
+/* Navbar specific light mode fixes */
+html.light nav .text-white,
+html.light nav button.text-white,
+html.light nav h2.text-white {
+  color: #1A232E !important;
+}
+
 html.light .text-white {
   color: #1A232E !important;
 }

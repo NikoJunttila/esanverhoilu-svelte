@@ -1,62 +1,84 @@
 <script>
-    import { fly } from "svelte/transition";
-    import { inView } from "$lib/utils/animations.js";
+    import { fade, fly } from "svelte/transition";
     import styles from "$lib/utils/styles.js";
-    import { startingFeatures } from "$lib/constants/index.js";
-    import ServiceStep from "$lib/components/ServiceStep.svelte";
     import SectionTitle from "$lib/components/SectionTitle.svelte";
     import SectionSubtitle from "$lib/components/SectionSubtitle.svelte";
 
-    let showImage = $state(false);
-    let showContent = $state(false);
+    const services = [
+        {
+            icon: "🪑",
+            title: "Huonekaluverhoilut",
+            description:
+                "Verhoilut tyylihuonekaluista moderneihin kalusteisiin. Tuomme uuden elämän vanhoihin huonekaluihin ja toteutamme myös täysin uusia verhoiluja.",
+        },
+        {
+            icon: "🏍️",
+            title: "Ajoneuvojen verhoilut",
+            description:
+                "Moottoripyörän, mopon ja moottorikelkan penkkien verhoilut. Myös veneiden sisustukset ja muut erikoiskohteet.",
+        },
+        {
+            icon: "🔨",
+            title: "Puusepäntyöt",
+            description:
+                "Pienimuotoiset puusepäntyöt verhoilun yhteydessä. Korjaukset ja kunnostukset osana verhoilutyötä.",
+        },
+    ];
 </script>
 
 <section class="{styles.paddings} relative z-10" id="services">
-    <div class="{styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8">
-        <div
-            use:inView={{
-                onEnter: () => (showImage = true),
-                threshold: 0.25,
-                once: false,
-            }}
-        >
-            {#if showImage}
-                <div
-                    transition:fly={{ x: -100, duration: 1000, delay: 200 }}
-                    class="flex-1 {styles.flexCenter}"
-                >
-                    <img
-                        src="/esa.jpg"
-                        alt="esa"
-                        class="w-[90%] h-[90%] object-cover rounded-2xl border border-white/10 opacity-90"
-                    />
-                </div>
-            {/if}
+    <div class="{styles.innerWidth} mx-auto flex flex-col">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <SectionSubtitle title="| Palvelut" textStyles="text-center" />
+            <SectionTitle title="Mitä tarjoamme" textStyles="text-center" />
         </div>
-        <div
-            use:inView={{
-                onEnter: () => (showContent = true),
-                threshold: 0.25,
-                once: false,
-            }}
-        >
-            {#if showContent}
-                <div
-                    transition:fly={{ x: -100, duration: 1000, delay: 200 }}
-                    class="flex-[0.75] flex justify-center flex-col"
-                >
-                    <SectionSubtitle title="| palvelut pähkinänkuoressa" />
-                    <SectionTitle title="Palvelut" />
 
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {#each services as service, index}
+                <div
+                    in:fade={{ duration: 600, delay: index * 150 }}
+                    class="group p-8 bg-secondary-dark/50 rounded-2xl border border-white/10 hover:border-accent-gold/50 transition-all duration-300 hover:scale-105"
+                >
                     <div
-                        class="mt-[31px] flex flex-col max-w-[370px] gap-[24px]"
+                        class="text-6xl mb-6 transform group-hover:scale-110 transition-transform duration-300"
                     >
-                        {#each startingFeatures as feature, index}
-                            <ServiceStep number={index + 1} text={feature} />
-                        {/each}
+                        {service.icon}
                     </div>
+                    <h3
+                        class="font-serif text-2xl text-accent-gold mb-4 group-hover:text-white transition-colors"
+                    >
+                        {service.title}
+                    </h3>
+                    <p class="text-secondary-white leading-relaxed">
+                        {service.description}
+                    </p>
                 </div>
-            {/if}
+            {/each}
+        </div>
+
+        <!-- Image Section -->
+        <div
+            in:fade={{ duration: 800, delay: 500 }}
+            class="relative rounded-2xl overflow-hidden border border-white/10"
+        >
+            <div
+                class="absolute bg-gradient-to-t from-primary-dark via-transparent to-transparent z-10"
+            ></div>
+            <img
+                src="/esa.jpg"
+                alt="Esan verhoilu - ammattitaitoinen verhoilija työssään"
+                class="w-full h-[400px] md:h-[500px] object-cover"
+            />
+            <div class="absolute bottom-0 left-0 right-0 p-8 z-20 text-center">
+                <p
+                    class="font-serif text-2xl md:text-3xl text-white mb-2 italic"
+                >
+                    "Kymmenien vuosien kokemus takaa laadukkaan lopputuloksen"
+                </p>
+                <p class="text-accent-gold text-lg">- Esa Junttila</p>
+            </div>
         </div>
     </div>
 </section>

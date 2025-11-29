@@ -32,7 +32,7 @@
         <img
           src="/hero.jpeg"
           alt="cover"
-          class="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative opacity-80 border-l border-t border-white/10"
+          class="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative border-l border-t border-white/10"
         />
       </div>
     {/if}

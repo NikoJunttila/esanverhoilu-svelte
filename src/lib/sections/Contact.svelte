@@ -101,9 +101,9 @@
           in:fade={{ duration: 600, delay: 300 }}
           class="p-6 bg-secondary-dark/80 rounded-xl border border-white/10"
         >
-          <div class="flex items-start gap-4 mb-6">
+          <div class="flex rounded items-start gap-4 mb-6 items-center">
             <div
-              class="w-12 h-12 rounded-full bg-accent-gold/20 flex items-center justify-center flex-shrink-0"
+              class="ml-2 w-12 h-12 rounded-full bg-accent-gold/20 flex items-center justify-center flex-shrink-0"
             >
               <svg
                 class="w-6 h-6 text-accent-gold"
@@ -132,7 +132,9 @@
             </div>
           </div>
 
-          <div class="pt-6 border-t border-white/10 flex flex-col gap-4">
+          <div
+            class="py-3 rounded border-t border-white/10 flex flex-col items-center gap-4"
+          >
             <a
               href="https://www.facebook.com/verhoomoesa/"
               target="_blank"
@@ -177,3 +179,14 @@
     </div>
   </div>
 </section>
+
+<style>
+  h3 {
+    border-radius: 10px;
+    padding: 5px;
+  }
+  p {
+    border-radius: 10px;
+    padding: 5px;
+  }
+</style>
