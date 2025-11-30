@@ -19,13 +19,15 @@
         <!-- Business Name Card -->
         <div
           in:fade={{ duration: 600, delay: 100 }}
-          class="p-6 bg-gradient-to-br from-accent-gold/10 to-accent-gold/5 rounded-xl border border-accent-gold/20"
+          class="p-6 bg-gradient-to-br from-accent-gold/10 to-accent-gold/5 rounded-xl border border-accent-gold/20 shadow-sm"
         >
           <h3 class="font-serif text-3xl text-accent-gold mb-2">
             Esan Verhoilu
           </h3>
-          <p class="text-white text-xl">Esa Junttila</p>
-          <p class="text-secondary-white/60 text-sm mt-2">
+          <p class="text-light-text dark:text-white text-xl">Esa Junttila</p>
+          <p
+            class="text-light-text-secondary dark:text-secondary-white/60 text-sm mt-2"
+          >
             Y-tunnus: 2758041-2
           </p>
         </div>
@@ -38,7 +40,7 @@
           <!-- Phone -->
           <a
             href="tel:+358408344202"
-            class="group p-6 bg-secondary-dark/80 rounded-xl border border-white/10 hover:border-accent-gold/50 transition-all duration-300 hover:scale-105"
+            class="group p-6 bg-light-secondary dark:bg-secondary-dark/80 rounded-xl border border-gray-200 dark:border-white/10 hover:border-accent-gold/50 transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
           >
             <div
               class="w-12 h-12 rounded-full bg-accent-gold/20 flex items-center justify-center mb-4 group-hover:bg-accent-gold/30 transition-colors"
@@ -57,9 +59,13 @@
                 />
               </svg>
             </div>
-            <p class="text-sm text-secondary-white/60 mb-1">Puhelinnumero</p>
             <p
-              class="text-white text-xl font-medium group-hover:text-accent-gold transition-colors"
+              class="text-sm text-light-text-secondary dark:text-secondary-white/60 mb-1"
+            >
+              Puhelinnumero
+            </p>
+            <p
+              class="text-light-text dark:text-white text-xl font-medium group-hover:text-accent-gold transition-colors"
             >
               040-8344202
             </p>
@@ -68,7 +74,7 @@
           <!-- Email -->
           <a
             href="mailto:esa.tapani@anvianet.fi"
-            class="group p-6 bg-secondary-dark/80 rounded-xl border border-white/10 hover:border-accent-gold/50 transition-all duration-300 hover:scale-105"
+            class="group p-6 bg-light-secondary dark:bg-secondary-dark/80 rounded-xl border border-gray-200 dark:border-white/10 hover:border-accent-gold/50 transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
           >
             <div
               class="w-12 h-12 rounded-full bg-accent-gold/20 flex items-center justify-center mb-4 group-hover:bg-accent-gold/30 transition-colors"
@@ -87,9 +93,13 @@
                 />
               </svg>
             </div>
-            <p class="text-sm text-secondary-white/60 mb-1">Sähköposti</p>
             <p
-              class="text-white text-lg font-medium group-hover:text-accent-gold transition-colors break-all"
+              class="text-sm text-light-text-secondary dark:text-secondary-white/60 mb-1"
+            >
+              Sähköposti
+            </p>
+            <p
+              class="text-light-text dark:text-white text-lg font-medium group-hover:text-accent-gold transition-colors break-all"
             >
               esa.tapani@anvianet.fi
             </p>
@@ -99,7 +109,7 @@
         <!-- Address & Social -->
         <div
           in:fade={{ duration: 600, delay: 300 }}
-          class="p-6 bg-secondary-dark/80 rounded-xl border border-white/10"
+          class="p-6 bg-light-secondary dark:bg-secondary-dark/80 rounded-xl border border-gray-200 dark:border-white/10 shadow-sm"
         >
           <div class="flex rounded items-start gap-4 mb-6 items-center">
             <div
@@ -126,20 +136,28 @@
               </svg>
             </div>
             <div>
-              <p class="text-sm text-secondary-white/60 mb-1">Osoite</p>
-              <p class="text-white text-xl font-medium">Vatajantie 22</p>
-              <p class="text-white text-xl font-medium">62100 Lapua</p>
+              <p
+                class="text-sm text-light-text-secondary dark:text-secondary-white/60 mb-1"
+              >
+                Osoite
+              </p>
+              <p class="text-light-text dark:text-white text-xl font-medium">
+                Vatajantie 22
+              </p>
+              <p class="text-light-text dark:text-white text-xl font-medium">
+                62100 Lapua
+              </p>
             </div>
           </div>
 
           <div
-            class="py-3 rounded border-t border-white/10 flex flex-col items-center gap-4"
+            class="py-3 rounded border-t border-gray-200 dark:border-white/10 flex flex-col items-center gap-4"
           >
             <a
               href="https://www.facebook.com/verhoomoesa/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-3 text-accent-gold hover:text-white transition-colors duration-300 text-lg font-medium"
+              class="inline-flex items-center gap-3 text-accent-gold hover:text-light-text dark:hover:text-white transition-colors duration-300 text-lg font-medium"
             >
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -153,8 +171,12 @@
             <div
               class="p-4 bg-accent-gold/10 rounded-lg border-l-4 border-accent-gold"
             >
-              <p class="text-white font-medium">⏰ Avoinna sopimuksen mukaan</p>
-              <p class="text-secondary-white/80 text-sm mt-1">
+              <p class="text-light-text dark:text-white font-medium">
+                ⏰ Avoinna sopimuksen mukaan
+              </p>
+              <p
+                class="text-light-text-secondary dark:text-secondary-white/80 text-sm mt-1"
+              >
                 Otathan etukäteen yhteyttä!
               </p>
             </div>
@@ -165,14 +187,14 @@
       <!-- Map -->
       <div
         in:fade={{ duration: 600, delay: 400 }}
-        class="h-full min-h-[600px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
+        class="h-full min-h-[600px] rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-2xl"
       >
         <iframe
           title="Esan Verhoilu sijainti kartalla"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180.44240597036634!2d23.059231474528385!3d62.960390745651196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4687b30f10cc7547%3A0x347065c44cad2e4d!2sVatajantie%2022%2C%2062100%20Lapua!5e0!3m2!1sen!2sfi!4v1764347453152!5m2!1sen!2sfi"
           width="100%"
           height="100%"
-          style="border:0; min-height: 600px; filter: grayscale(100%) invert(92%) contrast(83%);"
+          class="grayscale contrast-100 dark:invert-[.92] dark:contrast-[.83] min-h-[600px] border-0"
           loading="lazy"
         ></iframe>
       </div>

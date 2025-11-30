@@ -18,7 +18,7 @@ html {
   color: white;
 }
 
-*:not(img):not(video):not(svg) {
+body {
   background-color: #121212;
 }
 
@@ -27,7 +27,7 @@ html.light * {
   color: #1A232E;
 }
 
-html.light *:not(img):not(video):not(svg) {
+body.light {
   background-color: #F5F5F5;
 }
 

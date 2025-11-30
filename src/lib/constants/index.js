@@ -31,3 +31,34 @@ export const startingFeatures = [
     'AJONEUVOJEN VERHOILUT: moottoripyörän, mopon ja moottorikelkan penkkien verhoilut.',
     'Pienimuotoiset puusepäntyöt verhoilun yhteydessä.',
 ];
+
+export const fabricSuppliers = [
+    {
+        name: 'Annala',
+        url: 'http://www.Annala.fi',
+    },
+    {
+        name: 'Kangastukku',
+        url: 'http://www.Kangastukku.com',
+    },
+    {
+        name: 'Lauritzon',
+        url: 'http://www.Lauritzon.fi',
+    },
+    {
+        name: 'Kankaita.com',
+        url: 'http://www.Kankaita.com',
+    },
+    {
+        name: 'Orient Occident',
+        url: 'http://www.Orientoccident.fi',
+    },
+    {
+        name: 'Sisustus Muovikum',
+        url: 'http://www.sisustusMuovikum.fi',
+    },
+    {
+        name: 'Patja ja Peite',
+        url: 'http://www.Patjajapeite.com',
+    },
+];

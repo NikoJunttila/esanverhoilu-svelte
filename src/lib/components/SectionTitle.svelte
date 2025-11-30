@@ -16,7 +16,7 @@
     {#if show}
         <h2
             transition:fly={{ y: 20, duration: 600 }}
-            class="mt-[8px] font-serif font-bold md:text-[64px] text-[40px] text-white {textStyles}"
+            class="mt-[8px] font-serif font-bold md:text-[64px] text-[40px] text-light-text dark:text-white {textStyles}"
         >
             {title}
         </h2>

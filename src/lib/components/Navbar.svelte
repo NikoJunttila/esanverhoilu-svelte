@@ -43,7 +43,7 @@
             class="w-[40px] h-[40px] object-contain opacity-90"
           />
           <h2
-            class="font-serif font-bold text-[24px] leading-[30px] text-white tracking-wider"
+            class="font-serif font-bold text-[24px] leading-[30px] text-primary-black dark:text-white tracking-wider"
           >
             ESANVERHOILU
           </h2>
@@ -54,7 +54,7 @@
           {#each navLinks as link}
             <a
               href={link.id}
-              class="text-secondary-white hover:text-accent-gold transition-colors duration-300 text-sm uppercase tracking-wider font-medium"
+              class="text-light-text-secondary dark:text-secondary-white hover:text-accent-gold transition-colors duration-300 text-sm uppercase tracking-wider font-medium"
             >
               {link.title}
             </a>
@@ -63,7 +63,7 @@
           <!-- Theme Toggle Button -->
           <button
             onclick={toggleTheme}
-            class="p-2 rounded-full bg-white/10 hover:bg-accent-gold/20 transition-all duration-300"
+            class="p-2 rounded-full bg-black/5 dark:bg-white/10 hover:bg-accent-gold/20 transition-all duration-300"
             aria-label="Toggle theme"
           >
             {#if $theme === "dark"}
@@ -101,7 +101,7 @@
         <!-- Mobile Menu Button -->
         <button
           onclick={toggleMenu}
-          class="lg:hidden z-50 relative w-[24px] h-[24px] flex flex-col justify-center items-center gap-1.5 text-white"
+          class="lg:hidden z-50 relative w-[24px] h-[24px] flex flex-col justify-center items-center gap-1.5 text-primary-black dark:text-white"
           aria-label="Menu"
         >
           <span
