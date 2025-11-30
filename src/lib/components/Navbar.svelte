@@ -31,30 +31,30 @@
   {#if show}
     <nav
       in:fly={{ y: -50, duration: 1000, delay: 500 }}
-      class="{styles.xPaddings} py-3 fixed top-0 w-full z-50 glassmorphism border-b border-white/10"
+      class="{styles.xPaddings} py-3 fixed top-0 w-full z-50 glassmorphism dark:!bg-primary-dark/90 border-b border-white/10"
     >
       <div
-        class="{styles.innerWidth} mx-auto flex justify-between items-center gap-8 p-2 rounded-lg"
+        class="{styles.innerWidth} mx-auto flex justify-between items-center gap-10 p-2 rounded-lg"
       >
-        <a href="#" class="flex items-center gap-4 z-50 relative">
+        <a href="#" class="flex items-center gap-2 z-50 relative">
           <img
             src="/icon.png"
             alt="logo"
             class="w-[40px] h-[40px] object-contain opacity-90"
           />
           <h2
-            class="font-serif font-bold text-[24px] leading-[30px] text-primary-black dark:text-white tracking-wider"
+            class="font-serif font-bold text-[24px] leading-[30px] tracking-wider"
           >
             ESANVERHOILU
           </h2>
         </a>
 
         <!-- Desktop Navigation -->
-        <div class="hidden lg:flex gap-8 items-center">
+        <div class="hidden lg:flex gap-4 items-center">
           {#each navLinks as link}
             <a
               href={link.id}
-              class="text-light-text-secondary dark:text-secondary-white hover:text-accent-gold transition-colors duration-300 text-sm uppercase tracking-wider font-medium"
+              class="hover:text-accent-gold transition-colors duration-300 text-sm uppercase tracking-wider font-medium"
             >
               {link.title}
             </a>
@@ -101,7 +101,7 @@
         <!-- Mobile Menu Button -->
         <button
           onclick={toggleMenu}
-          class="lg:hidden z-50 relative w-[24px] h-[24px] flex flex-col justify-center items-center gap-1.5 text-primary-black dark:text-white"
+          class="lg:hidden z-50 relative w-[24px] h-[24px] flex flex-col justify-center items-center gap-1.5 text-primary-black dark:!text-white"
           aria-label="Menu"
         >
           <span
