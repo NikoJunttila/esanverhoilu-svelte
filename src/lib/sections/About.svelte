@@ -1,6 +1,6 @@
 <script>
   import { fly, fade, scale } from "svelte/transition";
-  import { inView, staggerDelay } from "$lib/utils/animations.js";
+  import { inView } from "$lib/utils/animations.js";
   import SectionSubtitle from "$lib/components/SectionSubtitle.svelte";
   import styles from "$lib/utils/styles.js";
 
@@ -34,9 +34,9 @@
         >
           <span class="font-serif font-bold text-white"> Esan verhoilu </span>
           tarjoaa ammattitaitoisia verhoilupalveluja
-          <span class="font-serif font-bold text-white"> Lapualla </span>,
-          Karhunkylässä. Laadukkaan kädenjäljen perustana on verhoilijan ja
-          puusepän ammattitaito ja
+          <span class="font-serif font-bold text-white"> Lapualla. </span>
+          Laadukkaan kädenjäljen perustana on verhoilijan ja puusepän ammattitaito
+          ja
           <span class="font-serif font-bold text-white">
             kymmenien vuosien työkokemus aloilta.
           </span>
@@ -135,13 +135,15 @@
       }}
     >
       {#if showArrow}
-        <img
-          transition:fly={{ y: 100, duration: 1000, delay: 300 }}
-          src="/arrow-down.svg"
-          alt="arrow down"
-          class="w-[18px] h-[28px] object-contain mt-[28px]"
-          style="background: none;"
-        />
+        <a href="#showcase">
+          <img
+            transition:fly={{ y: 100, duration: 1000, delay: 300 }}
+            src="/arrow-down.svg"
+            alt="arrow down"
+            class="w-[18px] h-[28px] object-contain mt-[28px]"
+            style="background: none;"
+          />
+        </a>
       {/if}
     </div>
   </div>

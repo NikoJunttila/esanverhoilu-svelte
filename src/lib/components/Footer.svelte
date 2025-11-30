@@ -32,6 +32,19 @@
                         >
                             Copyright © 2025 Esanverhoilu. All rights reserved.
                         </p>
+                        <div class="mt-4 flex flex-col items-center gap-2">
+                            <p class="text-sm text-secondary-white/60">
+                                Haluatko omat kotisivut?
+                            </p>
+                            <a
+                                href="https://junttila.dev/cv"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-sm text-accent-gold hover:text-white transition-colors duration-300 border-b border-accent-gold/30 hover:border-white"
+                            >
+                                Ota yhteyttä kehittäjään
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

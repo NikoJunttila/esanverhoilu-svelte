@@ -24,9 +24,9 @@
           <h3 class="font-serif text-3xl text-accent-gold mb-2">
             Esan Verhoilu
           </h3>
-          <p class="text-light-text dark:text-white text-xl">Esa Junttila</p>
+          <p class="light:text-light-text text-white text-xl">Esa Junttila</p>
           <p
-            class="text-light-text-secondary dark:text-secondary-white/60 text-sm mt-2"
+            class="light:text-light-text-secondary text-secondary-white/60 text-sm mt-2"
           >
             Y-tunnus: 2758041-2
           </p>

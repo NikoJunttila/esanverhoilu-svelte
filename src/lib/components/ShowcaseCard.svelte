@@ -38,15 +38,10 @@
         <div
           class="flex items-center gap-2 text-accent-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"
         >
-          <span class="text-sm uppercase tracking-wider font-medium"
+          <span class="text-sm !text-white uppercase tracking-wider font-medium"
             >Katso kuva</span
           >
-          <svg
-            class="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg class="w-4 h-4" fill="white" stroke="white" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"

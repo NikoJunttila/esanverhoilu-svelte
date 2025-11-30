@@ -31,7 +31,7 @@
   {#if show}
     <nav
       in:fly={{ y: -50, duration: 1000, delay: 500 }}
-      class="{styles.xPaddings} py-3 fixed top-0 w-full z-50 glassmorphism dark:!bg-primary-dark/90 border-b border-white/10"
+      class="{styles.xPaddings} py-3 fixed top-0 w-full z-50 glassmorphism border-b border-white/10"
     >
       <div
         class="{styles.innerWidth} mx-auto flex justify-between items-center gap-10 p-2 rounded-lg"
